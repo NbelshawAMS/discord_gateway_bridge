@@ -1,0 +1,14 @@
+{
+  "name": "household-discord-gateway",
+  "main": "discord_gateway_bridge.js",
+  "compatibility_date": "2026-10-26",
+  "durable_objects": {
+    "bindings": [
+      {"name": "GATEWAY", "class_name": "DiscordGateway"}
+    ]
+  },
+  "migrations": [
+    {"tag":"v1", "new_sqlite_classes":["DiscordGateway"]}
+  ],
+  "triggers": {"crons": ["*/5 * * * *"]}
+}
